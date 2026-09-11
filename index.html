@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>document.documentElement.classList.add("js");</script>
+<title>PayMap — Track Where It Goes</title>
+<meta name="description" content="PayMap is a simple expense tracker that helps you record, organize and export your expenses." />
+<meta name="theme-color" content="#0B1220" />
+<link rel="canonical" href="https://paymap.app/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="PayMap" />
+<meta property="og:title" content="PayMap — Track Where It Goes" />
+<meta property="og:description" content="PayMap is a simple expense tracker that helps you record, organize and export your expenses." />
+<meta property="og:url" content="https://paymap.app/" />
+<meta property="og:image" content="https://paymap.app/assets/img/paymap-logo.png" />
+<meta property="og:image:alt" content="PayMap logo" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="PayMap — Track Where It Goes" />
+<meta name="twitter:description" content="A simple expense tracker that helps you record, organize and export your expenses." />
+<meta name="twitter:image" content="https://paymap.app/assets/img/paymap-logo.png" />
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="assets/img/icon-192.png" type="image/png" sizes="192x192" />
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+<link rel="manifest" href="site.webmanifest" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/reviews.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "PayMap",
+  "operatingSystem": "Android",
+  "applicationCategory": "FinanceApplication",
+  "description": "PayMap is a simple expense tracker that helps you record, organize and export your everyday expenses. Local-first, no account required.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============================ NAVBAR ============================ -->
+<header class="nav" id="top">
+  <div class="nav__inner">
+    <a class="brand" href="index.html" aria-label="PayMap — home">
+      <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+        <defs><linearGradient id="bm" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#38BDF8" /><stop offset=".55" stop-color="#4F7CFF" /><stop offset="1" stop-color="#A855F7" />
+        </linearGradient></defs>
+        <path d="M14 8h13a10 10 0 0 1 0 20h-6v12h-7V8Zm7 7v6h6a3 3 0 0 0 0-6h-6Z" fill="url(#bm)" />
+        <path d="M13.5 33.5 20 27l5.5 3.5L33 21" fill="none" stroke="#00D9A3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+        <circle cx="13.5" cy="33.5" r="2.6" fill="#00D9A3" /><circle cx="25.5" cy="30.5" r="2.6" fill="#00D9A3" /><circle cx="33" cy="21" r="2.6" fill="#6FE3FF" />
+      </svg>
+      <span>PayMap</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="index.html" data-navlink="index.html">Home</a>
+      <a href="index.html#features" data-navlink="features">Features</a>
+      <a href="index.html#how" data-navlink="how">How It Works</a>
+      <a href="index.html#screenshots" data-navlink="screenshots">Screenshots</a>
+      <a href="index.html#reviews" data-navlink="reviews">Reviews</a>
+      <a href="index.html#download" data-navlink="download">Download</a>
+    </nav>
+
+    <div class="nav__actions">
+      <a class="btn btn--primary nav__cta" data-cfg-link="APP_DOWNLOAD_URL" data-cfg-placeholder-text="Download soon" href="#" rel="noopener">
+        <span data-cfg-label>Download</span>
+      </a>
+    </div>
+
+    <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
+    </button>
+  </div>
+</header>
+
+<div class="menu-backdrop"></div>
+<div class="mobile-menu" id="mobile-menu">
+  <ul>
+    <li><a href="index.html" data-navlink="index.html">Home</a></li>
+    <li><a href="index.html#features">Features</a></li>
+    <li><a href="index.html#how">How It Works</a></li>
+    <li><a href="index.html#screenshots">Screenshots</a></li>
+    <li><a href="index.html#reviews">Reviews</a></li>
+    <li><a href="index.html#download">Download</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="mobile-menu__actions">
+    <a class="btn btn--primary btn--block" data-cfg-link="APP_DOWNLOAD_URL" data-cfg-placeholder-text="Download coming soon" href="#" rel="noopener"><span data-cfg-label>Download PayMap</span></a>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ============================ HERO ============================ -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="hero__spark" aria-hidden="true"></div>
+    <div class="container hero__grid">
+      <div class="hero__copy reveal">
+        <span class="badge"><span class="badge__dot" aria-hidden="true"></span> Expense tracking made simple</span>
+        <h1 id="hero-title">Track where it goes.</h1>
+        <p class="hero__lead">PayMap makes it simple to record, organize and understand your everyday expenses.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary btn--lg" data-cfg-link="APP_DOWNLOAD_URL" data-cfg-placeholder-text="Download coming soon" href="#" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16" /></svg>
+            <span><span data-cfg-label>Download PayMap</span></span>
+          </a>
+          <a class="btn btn--ghost btn--lg" href="#intro">Learn more</a>
+        </div>
+        <p class="hero__note">Android &bull; Version <span data-cfg-text="APP_VERSION">1.0.0</span> &bull; No account required</p>
+      </div>
+
+      <div class="hero__visual reveal reveal-delay-2">
+        <div class="floaty floaty--a" aria-hidden="true">
+          <span class="floaty__icon" style="background:rgba(0,217,163,.15);color:var(--teal)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 7h18v10H3zM3 11h18M7 15h4" /></svg>
+          </span>
+          <span><span class="k">Total spent</span><span class="v">1,507.24</span></span>
+        </div>
+        <div class="floaty floaty--b" aria-hidden="true">
+          <span class="floaty__icon" style="background:rgba(199,146,255,.15);color:var(--purple)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1Z" /><path d="M9 12h6M9 16h6" /></svg>
+          </span>
+          <span><span class="k">Recent expenses</span><span class="v">7 items</span></span>
+        </div>
+        <div class="floaty floaty--c" aria-hidden="true">
+          <span class="floaty__icon" style="background:rgba(111,227,255,.15);color:var(--cyan)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z" /></svg>
+          </span>
+          <span><span class="k">Categories</span><span class="v">7 groups</span></span>
+        </div>
+
+        <!-- Phone: PayMap dashboard -->
+        <div class="phone" role="img" aria-label="PayMap app showing the dashboard: a total-spent summary card and a list of recent expenses.">
+          <span class="phone__notch" aria-hidden="true"></span>
+          <div class="phone__screen">
+            <div class="app">
+              <div class="app__top">
+                <div class="app__brand">
+                  <img src="assets/img/paymap-icon.png" alt="" width="34" height="34" decoding="async" />
+                  <span><strong>PayMap</strong><span>Track where it goes</span></span>
+                </div>
+                <div class="app__icons">
+                  <span class="app__icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M12 3v13m0-13 4 4m-4-4-4 4" /></svg></span>
+                  <span class="app__icon-btn"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.6" /><circle cx="12" cy="12" r="1.6" /><circle cx="12" cy="19" r="1.6" /></svg></span>
+                </div>
+              </div>
+
+              <div class="sumcard">
+                <div class="sumcard__row">
+                  <span class="sumcard__month">SEPTEMBER 2026</span>
+                  <span class="sumcard__pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 2h9l5 5v15H6z" /></svg> 7 items</span>
+                </div>
+                <p class="sumcard__label">Total spent</p>
+                <div class="sumcard__total">1,507.24</div>
+              </div>
+
+              <div class="app__section-label"><span>RECENT</span><span>7 total</span></div>
+              <div class="app__list">
+                <div class="erow">
+                  <span class="erow__icon" style="background:rgba(124,156,255,.16);color:var(--cat-rent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7M5 10v10h14V10" /></svg></span>
+                  <span class="erow__body"><span class="erow__name">Rent</span><span class="erow__meta">Rent &middot; Sep 1</span></span>
+                  <span class="erow__amt">-1,200.00</span>
+                </div>
+                <div class="erow">
+                  <span class="erow__icon" style="background:rgba(255,179,71,.16);color:var(--cat-food)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 3v7a3 3 0 0 0 6 0V3M7 3v18M17 3c-2 0-3 2-3 5s1 4 3 4 3-1 3-4-1-5-3-5Zm0 9v9" /></svg></span>
+                  <span class="erow__body"><span class="erow__name">Groceries</span><span class="erow__meta">Food &middot; Sep 6</span></span>
+                  <span class="erow__amt">-84.20</span>
+                </div>
+                <div class="erow">
+                  <span class="erow__icon" style="background:rgba(0,217,163,.16);color:var(--cat-transport)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16 6 9h12l1 7M3 16h18v3H3zM7 19v2M17 19v2" /></svg></span>
+                  <span class="erow__body"><span class="erow__name">Fuel</span><span class="erow__meta">Transport &middot; Sep 5</span></span>
+                  <span class="erow__amt">-55.00</span>
+                </div>
+                <div class="erow">
+                  <span class="erow__icon" style="background:rgba(111,227,255,.16);color:var(--cat-utilities)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z" /></svg></span>
+                  <span class="erow__body"><span class="erow__name">Electricity</span><span class="erow__meta">Utilities &middot; Sep 4</span></span>
+                  <span class="erow__amt">-62.75</span>
+                </div>
+                <div class="erow">
+                  <span class="erow__icon" style="background:rgba(255,107,139,.16);color:var(--cat-health)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.35-9.5-8.5C.5 8.5 3 5 6.5 5 9 5 12 8 12 8s3-3 5.5-3C21 5 23.5 8.5 21.5 12.5 19 16.65 12 21 12 21Z" /></svg></span>
+                  <span class="erow__body"><span class="erow__name">Pharmacy</span><span class="erow__meta">Health &middot; Sep 3</span></span>
+                  <span class="erow__amt">-23.40</span>
+                </div>
+              </div>
+
+              <span class="app__fab">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14" /></svg>
+                Add expense
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= INTRODUCTION ========================= -->
+  <section class="section" id="intro" aria-labelledby="intro-title">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Why PayMap</p>
+        <h2 id="intro-title">Your expenses. Organized.</h2>
+        <p>Keep your spending records in one place. Add an expense, choose a category, and let PayMap keep track of the total for you.</p>
+      </div>
+
+      <div class="pillars">
+        <article class="pillar reveal">
+          <div class="pillar__ic" style="background:rgba(0,217,163,.1);color:var(--teal)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9" /><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z" /></svg>
+          </div>
+          <h3>Track</h3>
+          <p>Record your expenses quickly and keep your spending history organized.</p>
+        </article>
+        <article class="pillar reveal reveal-delay-1">
+          <div class="pillar__ic" style="background:rgba(199,146,255,.12);color:var(--purple)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0l-7.2-7.2A2 2 0 0 1 2.8 12V4a1 1 0 0 1 1-1h8a2 2 0 0 1 1.4.6l7.4 7.4a2 2 0 0 1 0 2.8Z" /><circle cx="7.5" cy="7.5" r="1.5" fill="currentColor" /></svg>
+          </div>
+          <h3>Organize</h3>
+          <p>Classify your spending into simple categories so you can understand where your money goes.</p>
+        </article>
+        <article class="pillar reveal reveal-delay-2">
+          <div class="pillar__ic" style="background:rgba(111,227,255,.12);color:var(--cyan)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" /><path d="M14 2v6h6M12 18v-6m0 0-2.5 2.5M12 12l2.5 2.5" /></svg>
+          </div>
+          <h3>Export</h3>
+          <p>Export your records to PDF or Excel whenever you need them.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================== FEATURES ========================== -->
+  <section class="section section--tight" id="features" aria-labelledby="features-title">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Features</p>
+        <h2 id="features-title">Everything you need to track your spending</h2>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature reveal">
+          <span class="feature__num">FEATURE 01</span>
+          <div class="feature__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z" /></svg></div>
+          <h3>Quick Expense Entry</h3>
+          <p>Add an expense with its name, amount, date and category in just a few steps.</p>
+        </article>
+        <article class="feature reveal reveal-delay-1">
+          <span class="feature__num">FEATURE 02</span>
+          <div class="feature__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0l-7.2-7.2A2 2 0 0 1 2.8 12V4a1 1 0 0 1 1-1h8a2 2 0 0 1 1.4.6l7.4 7.4a2 2 0 0 1 0 2.8Z" /><circle cx="7.5" cy="7.5" r="1.5" fill="currentColor" /></svg></div>
+          <h3>Smart Categories</h3>
+          <p>Organize your spending with categories such as Food, Transport, Health, Utilities and more.</p>
+        </article>
+        <article class="feature reveal reveal-delay-2">
+          <span class="feature__num">FEATURE 03</span>
+          <div class="feature__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z" /><circle cx="12" cy="12" r="3" /></svg></div>
+          <h3>Clear Spending Overview</h3>
+          <p>See your current total spending and recent expenses at a glance.</p>
+        </article>
+        <article class="feature reveal">
+          <span class="feature__num">FEATURE 04</span>
+          <div class="feature__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" /><path d="M14 2v6h6M12 18v-6m0 0-2.5 2.5M12 12l2.5 2.5" /></svg></div>
+          <h3>PDF &amp; Excel Export</h3>
+          <p>Create expense records in PDF or Excel format for your own use.</p>
+        </article>
+        <article class="feature reveal reveal-delay-1">
+          <span class="feature__num">FEATURE 05</span>
+          <div class="feature__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5" /></svg></div>
+          <h3>Start Fresh</h3>
+          <p>Finished with your current collection? Start a new expense period whenever you need.</p>
+        </article>
+        <article class="feature reveal reveal-delay-2">
+          <span class="feature__num">FEATURE 06</span>
+          <div class="feature__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.2 4.9L19.5 9l-3.7 3.9.7 5.4L12 15.9 7.5 18.3l.7-5.4L4.5 9l5.3-1.1z" /></svg></div>
+          <h3>Simple by Design</h3>
+          <p>No complicated financial tools. PayMap focuses on the essential things you need to track your expenses.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= HOW IT WORKS ======================== -->
+  <section class="section section--tight" id="how" aria-labelledby="how-title">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">How it works</p>
+        <h2 id="how-title">How PayMap works</h2>
+      </div>
+
+      <ol class="steps">
+        <li class="step reveal">
+          <div class="step__n">01</div>
+          <h3>Add</h3>
+          <p>Enter your expense.</p>
+        </li>
+        <li class="step reveal reveal-delay-1">
+          <div class="step__n">02</div>
+          <h3>Classify</h3>
+          <p>Choose a category.</p>
+        </li>
+        <li class="step reveal reveal-delay-2">
+          <div class="step__n">03</div>
+          <h3>Track</h3>
+          <p>Monitor your total spending.</p>
+        </li>
+        <li class="step reveal reveal-delay-3">
+          <div class="step__n">04</div>
+          <h3>Export</h3>
+          <p>Save your records as PDF or Excel.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ========================= SCREENSHOTS ========================= -->
+  <section class="section" id="screenshots" aria-labelledby="shots-title">
+    <div class="container">
+      <div class="section__head section__head--center reveal">
+        <p class="eyebrow">Screenshots</p>
+        <h2 id="shots-title">See PayMap in action</h2>
+        <p>A calm, dark interface built to get an expense in and out of your way fast.</p>
+      </div>
+
+      <div class="shots reveal" role="list">
+        <!-- 1. Dashboard -->
+        <figure class="shot" role="listitem">
+          <div class="phone" role="img" aria-label="PayMap dashboard screen with the monthly total and recent expenses.">
+            <span class="phone__notch" aria-hidden="true"></span>
+            <div class="phone__screen"><div class="app">
+              <div class="app__top">
+                <div class="app__brand"><img src="assets/img/paymap-icon.png" alt="" width="30" height="30" loading="lazy" decoding="async" /><span><strong>PayMap</strong><span>Track where it goes</span></span></div>
+                <div class="app__icons"><span class="app__icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M12 3v13m0-13 4 4m-4-4-4 4" /></svg></span></div>
+              </div>
+              <div class="sumcard">
+                <div class="sumcard__row"><span class="sumcard__month">SEPTEMBER 2026</span><span class="sumcard__pill">7 items</span></div>
+                <p class="sumcard__label">Total spent</p>
+                <div class="sumcard__total">1,507.24</div>
+              </div>
+              <div class="app__section-label"><span>RECENT</span><span>7 total</span></div>
+              <div class="app__list">
+                <div class="erow"><span class="erow__icon" style="background:rgba(124,156,255,.16);color:var(--cat-rent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7M5 10v10h14V10" /></svg></span><span class="erow__body"><span class="erow__name">Rent</span><span class="erow__meta">Rent &middot; Sep 1</span></span><span class="erow__amt">-1,200.00</span></div>
+                <div class="erow"><span class="erow__icon" style="background:rgba(255,179,71,.16);color:var(--cat-food)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 3v7a3 3 0 0 0 6 0V3M7 3v18M17 3c-2 0-3 2-3 5s1 4 3 4 3-1 3-4-1-5-3-5Zm0 9v9" /></svg></span><span class="erow__body"><span class="erow__name">Groceries</span><span class="erow__meta">Food &middot; Sep 6</span></span><span class="erow__amt">-84.20</span></div>
+                <div class="erow"><span class="erow__icon" style="background:rgba(0,217,163,.16);color:var(--cat-transport)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16 6 9h12l1 7M3 16h18v3H3zM7 19v2M17 19v2" /></svg></span><span class="erow__body"><span class="erow__name">Fuel</span><span class="erow__meta">Transport &middot; Sep 5</span></span><span class="erow__amt">-55.00</span></div>
+                <div class="erow"><span class="erow__icon" style="background:rgba(111,227,255,.16);color:var(--cat-utilities)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z" /></svg></span><span class="erow__body"><span class="erow__name">Internet</span><span class="erow__meta">Utilities &middot; Sep 4</span></span><span class="erow__amt">-39.99</span></div>
+              </div>
+              <span class="app__fab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14" /></svg> Add expense</span>
+            </div></div>
+          </div>
+          <figcaption><strong>Dashboard</strong>Total spent &amp; recent activity</figcaption>
+        </figure>
+
+        <!-- 2. Add expense -->
+        <figure class="shot" role="listitem">
+          <div class="phone" role="img" aria-label="PayMap add-expense sheet with name, amount, date and category chips.">
+            <span class="phone__notch" aria-hidden="true"></span>
+            <div class="phone__screen"><div class="app">
+              <div class="app__top">
+                <div class="app__brand"><img src="assets/img/paymap-icon.png" alt="" width="30" height="30" loading="lazy" decoding="async" /><span><strong>PayMap</strong><span>Track where it goes</span></span></div>
+              </div>
+              <div class="app__list" style="mask-image:none;-webkit-mask-image:none;flex:0">
+                <div class="erow"><span class="erow__icon" style="background:rgba(124,156,255,.16);color:var(--cat-rent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7M5 10v10h14V10" /></svg></span><span class="erow__body"><span class="erow__name">Rent</span><span class="erow__meta">Rent &middot; Sep 1</span></span><span class="erow__amt">-1,200.00</span></div>
+              </div>
+              <div class="sheet">
+                <div class="sheet__grab"></div>
+                <h4>New expense</h4>
+                <div class="field field--focus"><span>Name</span><strong>Restaurant</strong></div>
+                <div class="field"><span>Amount</span><strong>41.90</strong></div>
+                <div class="field"><span>Date</span><strong>Sep 7, 2026</strong></div>
+                <div class="chips">
+                  <span class="chip"><i style="background:var(--cat-rent)"></i>Rent</span>
+                  <span class="chip"><i style="background:var(--cat-food)"></i>Food</span>
+                  <span class="chip"><i style="background:var(--cat-transport)"></i>Transport</span>
+                  <span class="chip chip--on" style="color:var(--cat-leisure)"><i style="background:var(--cat-leisure)"></i>Leisure</span>
+                  <span class="chip"><i style="background:var(--cat-health)"></i>Health</span>
+                </div>
+                <div class="sheet__cta">Add expense</div>
+              </div>
+            </div></div>
+          </div>
+          <figcaption><strong>Add Expense</strong>Name, amount, date, category</figcaption>
+        </figure>
+
+        <!-- 3. Expense overview -->
+        <figure class="shot" role="listitem">
+          <div class="phone" role="img" aria-label="PayMap expense list showing many categorized expenses.">
+            <span class="phone__notch" aria-hidden="true"></span>
+            <div class="phone__screen"><div class="app">
+              <div class="app__top">
+                <div class="app__brand"><img src="assets/img/paymap-icon.png" alt="" width="30" height="30" loading="lazy" decoding="async" /><span><strong>PayMap</strong><span>Track where it goes</span></span></div>
+              </div>
+              <div class="app__section-label"><span>ALL EXPENSES</span><span>7 total</span></div>
+              <div class="app__list" style="mask-image:none;-webkit-mask-image:none">
+                <div class="erow"><span class="erow__icon" style="background:rgba(124,156,255,.16);color:var(--cat-rent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7M5 10v10h14V10" /></svg></span><span class="erow__body"><span class="erow__name">Rent</span><span class="erow__meta">Rent &middot; Sep 1</span></span><span class="erow__amt">-1,200.00</span></div>
+                <div class="erow"><span class="erow__icon" style="background:rgba(255,179,71,.16);color:var(--cat-food)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 3v7a3 3 0 0 0 6 0V3M7 3v18M17 3c-2 0-3 2-3 5s1 4 3 4 3-1 3-4-1-5-3-5Zm0 9v9" /></svg></span><span class="erow__body"><span class="erow__name">Restaurant</span><span class="erow__meta">Leisure &middot; Sep 7</span></span><span class="erow__amt">-41.90</span></div>
+                <div class="erow"><span class="erow__icon" style="background:rgba(255,179,71,.16);color:var(--cat-food)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 3v7a3 3 0 0 0 6 0V3M7 3v18M17 3c-2 0-3 2-3 5s1 4 3 4 3-1 3-4-1-5-3-5Zm0 9v9" /></svg></span><span class="erow__body"><span class="erow__name">Groceries</span><span class="erow__meta">Food &middot; Sep 6</span></span><span class="erow__amt">-84.20</span></div>
+                <div class="erow"><span class="erow__icon" style="background:rgba(0,217,163,.16);color:var(--cat-transport)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16 6 9h12l1 7M3 16h18v3H3zM7 19v2M17 19v2" /></svg></span><span class="erow__body"><span class="erow__name">Fuel</span><span class="erow__meta">Transport &middot; Sep 5</span></span><span class="erow__amt">-55.00</span></div>
+                <div class="erow"><span class="erow__icon" style="background:rgba(111,227,255,.16);color:var(--cat-utilities)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z" /></svg></span><span class="erow__body"><span class="erow__name">Electricity</span><span class="erow__meta">Utilities &middot; Sep 4</span></span><span class="erow__amt">-62.75</span></div>
+                <div class="erow"><span class="erow__icon" style="background:rgba(255,107,139,.16);color:var(--cat-health)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.35-9.5-8.5C.5 8.5 3 5 6.5 5 9 5 12 8 12 8s3-3 5.5-3C21 5 23.5 8.5 21.5 12.5 19 16.65 12 21 12 21Z" /></svg></span><span class="erow__body"><span class="erow__name">Pharmacy</span><span class="erow__meta">Health &middot; Sep 3</span></span><span class="erow__amt">-23.40</span></div>
+                <div class="erow"><span class="erow__icon" style="background:rgba(111,227,255,.16);color:var(--cat-utilities)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z" /></svg></span><span class="erow__body"><span class="erow__name">Internet</span><span class="erow__meta">Utilities &middot; Sep 2</span></span><span class="erow__amt">-39.99</span></div>
+              </div>
+            </div></div>
+          </div>
+          <figcaption><strong>Expense Overview</strong>Every record, categorized</figcaption>
+        </figure>
+
+        <!-- 4. Export -->
+        <figure class="shot" role="listitem">
+          <div class="phone" role="img" aria-label="PayMap export sheet with options to share a PDF, print, or export an Excel spreadsheet.">
+            <span class="phone__notch" aria-hidden="true"></span>
+            <div class="phone__screen"><div class="app">
+              <div class="app__top">
+                <div class="app__brand"><img src="assets/img/paymap-icon.png" alt="" width="30" height="30" loading="lazy" decoding="async" /><span><strong>PayMap</strong><span>Track where it goes</span></span></div>
+              </div>
+              <div class="sumcard" style="margin-bottom:12px">
+                <p class="sumcard__label" style="margin-top:0">Total spent</p>
+                <div class="sumcard__total">1,507.24</div>
+              </div>
+              <div class="sheet">
+                <div class="sheet__grab"></div>
+                <h4>Export</h4>
+                <p style="margin:0 0 12px;font-size:10.5px;color:var(--text-muted)">Share your expense list as a file</p>
+                <div class="export-row"><span class="export-row__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M16 6l-4-4-4 4M12 2v13" /></svg></span><span><strong>Share PDF</strong><span>Send the exported list to another app</span></span></div>
+                <div class="export-row"><span class="export-row__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6M6 18H4v-6h16v6h-2M8 14h8v7H8z" /></svg></span><span><strong>Print / Save as PDF</strong><span>Open the print dialog to save or print</span></span></div>
+                <div class="export-row"><span class="export-row__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4zM4 10h16M4 15h16M10 4v16" /></svg></span><span><strong>Share Excel (.xlsx)</strong><span>Export the list as a spreadsheet</span></span></div>
+              </div>
+            </div></div>
+          </div>
+          <figcaption><strong>Export</strong>PDF, print or Excel</figcaption>
+        </figure>
+      </div>
+      <p class="shots-hint">On a phone? Swipe the screens sideways. &nbsp;These are UI mockups &mdash; drop real captures in <code>assets/screenshots/</code>.</p>
+    </div>
+  </section>
+
+  <!-- =========================== REVIEWS =========================== -->
+  <section class="section section--tight" id="reviews" aria-labelledby="reviews-title">
+    <div class="container">
+      <div class="section__head section__head--center reveal">
+        <p class="eyebrow">Reviews</p>
+        <h2 id="reviews-title">What people are saying</h2>
+        <p>Ratings and reviews from the Google Play Store. They&rsquo;ll show here once PayMap is published and people start leaving feedback.</p>
+      </div>
+
+      <div class="reveal">
+        <div class="reviews__summary" data-reviews-summary hidden></div>
+        <div class="reviews-grid" data-reviews-list></div>
+        <div class="reviews__cta" data-reviews-cta hidden>
+          <a class="btn btn--ghost" data-cfg-link="GOOGLE_PLAY_URL" data-cfg-optional href="#" rel="noopener" target="_blank">Read all reviews on Google Play</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================== DOWNLOAD ========================== -->
+  <section class="section" id="download" aria-labelledby="dl-title">
+    <div class="container">
+      <div class="cta reveal">
+        <h2 id="dl-title">Ready to take control of your expenses?</h2>
+        <p>Download PayMap and start tracking where your money goes.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary btn--lg" data-cfg-link="APP_DOWNLOAD_URL" data-cfg-placeholder-text="Download coming soon" href="#" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16" /></svg>
+            <span><span data-cfg-label>Download APK</span><span class="btn__sub" data-cfg-text="APK_META">Android &bull; Latest version</span></span>
+          </a>
+          <a class="btn btn--ghost btn--lg" data-cfg-link="GOOGLE_PLAY_URL" data-cfg-optional href="#" rel="noopener" target="_blank" hidden>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.3 13 12 3.6 21.7c-.3-.2-.5-.6-.5-1V3.3c0-.4.2-.8.5-1Zm10.8 8.3L17 8.9l3.7 2.1c.7.4.7 1.6 0 2l-3.7 2.1-2.6-2.5 0 0ZM5.2 1.8l9.5 5.4-2.3 2.3-7.2-7.7ZM12.4 14.5l2.3 2.3-9.5 5.4 7.2-7.7Z" /></svg>
+            View on Google Play
+          </a>
+        </div>
+        <p class="hero__note" style="margin-top:1.1rem">Install PayMap on your Android device. No account required.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html" aria-label="PayMap — home">
+          <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+            <defs><linearGradient id="bmf" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#38BDF8" /><stop offset=".55" stop-color="#4F7CFF" /><stop offset="1" stop-color="#A855F7" />
+            </linearGradient></defs>
+            <path d="M14 8h13a10 10 0 0 1 0 20h-6v12h-7V8Zm7 7v6h6a3 3 0 0 0 0-6h-6Z" fill="url(#bmf)" />
+            <path d="M13.5 33.5 20 27l5.5 3.5L33 21" fill="none" stroke="#00D9A3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="13.5" cy="33.5" r="2.6" fill="#00D9A3" /><circle cx="25.5" cy="30.5" r="2.6" fill="#00D9A3" /><circle cx="33" cy="21" r="2.6" fill="#6FE3FF" />
+          </svg>
+          <span>PayMap</span>
+        </a>
+        <p>Track where it goes.</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Explore PayMap">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#how">How It Works</a></li>
+          <li><a href="index.html#screenshots">Screenshots</a></li>
+          <li><a href="index.html#download">Download</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="More">
+        <h3>More</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer__bottom">
+      <span>&copy; <span data-year>2026</span> PayMap. All rights reserved.</span>
+      <span>Android expense tracker &bull; v<span data-cfg-text="APP_VERSION">1.0.0</span></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>
